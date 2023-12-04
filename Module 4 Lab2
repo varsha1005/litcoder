@@ -1,0 +1,17 @@
+def egyptian_fraction(num, den):
+    fractions = []
+    while num > 0:
+        unit_fraction_den = (den + num - 1) // num
+        fractions.append(unit_fraction_den)
+        num = num * unit_fraction_den - den
+        den = den * unit_fraction_den
+
+    return fractions
+
+num = int(input())
+den = int(input())
+
+result = egyptian_fraction(num, den)
+for fraction in result:
+    print(fraction)
+                                                                                                                            
