@@ -1,0 +1,18 @@
+def mix_array(array_size, query_count, queries):
+    array = [0] * array_size
+    for query in queries:
+        start_index, end_index, value = query
+        for i in range(start_index - 1, end_index):
+            array[i] += value
+    max_value = max(array)
+
+    return max_value
+array_size = int(input())
+query_count = int(input())
+queries = []
+for i in range(query_count):
+    query = list(map(int, input().split()))
+    queries.append(query)
+result = mix_array(array_size, query_count, queries)
+print(result)
+                                                                                                                            
