@@ -1,0 +1,23 @@
+def Time_pass():
+  Txt = input()
+  count = 0 
+  lenght = len(Txt)
+  c_u=c_l=c_s=c_d=0
+  for i in Txt: 
+    if i.isupper(): 
+      c_u+=1
+    elif i.islower(): 
+      c_l+=1
+    elif i.isdigit():
+      c_d+=1
+    else : 
+      c_s+=1
+  p_u=(c_u)/lenght*100
+  p_l=(c_l)/lenght*100
+  p_d=(c_d)/lenght*100
+  p_s=(c_s)/lenght*100
+  print("%.3f"%p_u) 
+  print("%.3f"%p_l)
+  print("%.3f"%p_d)
+  print("%.3f"%p_s)
+Time_pass()
