@@ -1,0 +1,13 @@
+target_sweetness=int(input())
+candy_sweetness=list(map(int,input().split()))
+
+candy_sweetness.sort()
+steps=0
+
+while candy_sweetness[0]<target_sweetness:
+    new_sweetness=candy_sweetness[0]+2*candy_sweetness[1]
+    candy_sweetness=candy_sweetness[2:]+[new_sweetness]
+    candy_sweetness.sort()
+    steps+=1
+print(steps)
+                                                                                                                            
